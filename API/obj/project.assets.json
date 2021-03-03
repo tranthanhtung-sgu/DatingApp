@@ -7636,21 +7636,17 @@
     ]
   },
   "packageFolders": {
-    "/Users/tranthanhtung/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/tranthanhtung/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tranthanhtung/Documents/DatingApp/API/API.csproj",
+      "projectUniqueName": "/Users/tranthanhtung/Documents/GitHub/DatingApp/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/Users/tranthanhtung/Documents/DatingApp/API/API.csproj",
+      "projectPath": "/Users/tranthanhtung/Documents/GitHub/DatingApp/API/API.csproj",
       "packagesPath": "/Users/tranthanhtung/.nuget/packages/",
-      "outputPath": "/Users/tranthanhtung/Documents/DatingApp/API/obj/",
+      "outputPath": "/Users/tranthanhtung/Documents/GitHub/DatingApp/API/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "/Users/tranthanhtung/.nuget/NuGet/NuGet.Config"
       ],
