@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6YbCYdflRcL1aVQgJ5NN/5VQPKmj5dppdH93VnfmcxnRebcT8mGOc50l4qpyTE51jJdVvPoESLPdFcYuksoCbw==",
+  "dgSpecHash": "ya5WcT1UCXqu0eDMEZhzLwgxDwdDkumLd74xv13WRti2ZZGC/Jg+Fwoo0BQI4eiRrHJ4LmBD8/OE4wewI6djIw==",
   "success": true,
   "projectFilePath": "/Users/tranthanhtung/Documents/GitHub/DatingApp/API/API.csproj",
   "expectedPackageFiles": [
+    "/Users/tranthanhtung/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/Users/tranthanhtung/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "/Users/tranthanhtung/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/tranthanhtung/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.2/microsoft.aspnetcore.authentication.jwtbearer.5.0.2.nupkg.sha512",
     "/Users/tranthanhtung/.nuget/packages/microsoft.aspnetcore.diagnostics.entityframeworkcore/5.0.2/microsoft.aspnetcore.diagnostics.entityframeworkcore.5.0.2.nupkg.sha512",
@@ -108,7 +110,7 @@
     "/Users/tranthanhtung/.nuget/packages/system.private.datacontractserialization/4.3.0/system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "/Users/tranthanhtung/.nuget/packages/system.private.uri/4.3.2/system.private.uri.4.3.2.nupkg.sha512",
     "/Users/tranthanhtung/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
-    "/Users/tranthanhtung/.nuget/packages/system.reflection.emit/4.3.0/system.reflection.emit.4.3.0.nupkg.sha512",
+    "/Users/tranthanhtung/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
     "/Users/tranthanhtung/.nuget/packages/system.reflection.emit.ilgeneration/4.3.0/system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "/Users/tranthanhtung/.nuget/packages/system.reflection.emit.lightweight/4.3.0/system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "/Users/tranthanhtung/.nuget/packages/system.reflection.extensions/4.3.0/system.reflection.extensions.4.3.0.nupkg.sha512",
