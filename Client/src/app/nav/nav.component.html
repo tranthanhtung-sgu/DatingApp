@@ -21,7 +21,7 @@
         <div class="dropdown" *ngIf="(currentUser$ | async) as user" dropdown>
             <a class="dropdown-toggle text-light" dropdownToggle>Xin chào {{user.userName | titlecase}}</a>
             <div class="dropdown-menu mt-3"  *dropdownMenu>
-                <a class="dropdown-item">Thông tin</a>
+                <a class="dropdown-item" routerLink="member/edit">Thông tin</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" (click)="logout()">Đăng xuất</a>
             </div>

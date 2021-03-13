@@ -1,0 +1,62 @@
+<div class="row" *ngIf="member">
+    <div class="col-4">
+        <h1>Trang cá nhân</h1>
+    </div>
+    <div class="col-8">
+        <div class="alert alert-warning" *ngIf="editForm.dirty">
+            <strong>Chú ý: Thông tin đã được chỉnh sửa. Thông tin chỉnh sửa sẽ mất nếu không được lưu</strong>
+        </div>
+    </div>
+    <div class="col-4">
+        <img src="{{ member.photoUrl || '.assets/user.png' }}" alt="{{ member.knownAs }}"
+            class="card-img-top img-thumbnail" />
+        <div class="card-body">
+            <div>
+                <strong>Nơi ở:</strong>
+                <p>{{ member.city }}, {{ member.country }}</p>
+            </div>
+            <div>
+                <strong>Tuổi:</strong>
+                <p>{{ member.age }}</p>
+            </div>
+            <div>
+                <strong>Trạng thái:</strong>
+                <p>{{ member.lastActive }}</p>
+            </div>
+            <div>
+                <strong>Ngày tham gia:</strong>
+                <p>{{ member.created }}</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button form="editForm" [disabled]=!editForm.dirty type="submit" class="btn btn-success btn-block">Lưu</button>
+        </div>
+    </div>
+    <div class="col-8">
+        <tabset class="member-tab">
+            <tab heading='Thông tin về {{member.knownAs}}'>
+                <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
+                    <h4>Giới thiệu</h4>
+                    <textarea class="form-control" [(ngModel)]="member.introduction" name="introduction"
+                        rows="6">{{member.introduction}}</textarea>
+                    <h4>Sở thích</h4>
+                    <textarea class="form-control" [(ngModel)]="member.interests" name="interests"
+                        rows="6">{{member.interests}}</textarea>
+                    <h4>Hình mẫu lý tưởng</h4>
+                    <textarea class="form-control" [(ngModel)]="member.lookingFor" name="lookingFor"
+                        rows="6">{{member.lookingFor}}</textarea>
+                    <h4>Nơi ở:</h4>
+                    <div class="form-inline">
+                        <label for="city">City:</label>
+                        <input [(ngModel)]="member.city" type="text" name="city" class="form-control mx-2">
+                        <label for="country">Country:</label>
+                        <input [(ngModel)]="member.country" type="text" name="country" class="form-control mx-2">
+                    </div>
+                </form>
+            </tab>
+            <tab heading='Hình ảnh'>
+                Ảnh
+            </tab>
+        </tabset>
+    </div>
+</div>

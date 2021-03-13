@@ -1,1 +1,51 @@
-<p>member-detail works!</p>
+<div class="row" *ngIf="member">
+    <div class="col-4">
+        <img src="{{ member.photoUrl || '.assets/user.png' }}" alt="{{ member.knownAs }}"
+            class="card-img-top img-thumbnail" />
+        <div class="card-body">
+            <div>
+                <strong>Nơi ở:</strong>
+                <p>{{ member.city }}, {{ member.country }}</p>
+            </div>
+            <div>
+                <strong>Tuổi:</strong>
+                <p>{{ member.age }}</p>
+            </div>
+            <div>
+                <strong>Trạng thái:</strong>
+                <p>{{ member.lastActive }}</p>
+            </div>
+            <div>
+                <strong>Ngày tham gia:</strong>
+                <p>{{ member.created }}</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="btn-group d-flex">
+                <button class="btn btn-primary">Like</button>
+                <button class="btn btn-success">Message</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <tabset class="member-tab">
+            <tab heading='Thông tin về {{member.knownAs}}'>
+                <h4>Giới thiệu</h4>
+                <p>{{member.introduction}}</p>
+                <h4>Hình mẫu lý tưởng</h4>
+                <p>{{member.lookingFor}}</p>
+            </tab>
+            <tab heading='Sở thích'>  
+                <h4>Sở thích</h4>     
+                <p>{{member.interests}}</p>
+            </tab>
+            <tab heading='Hình ảnh'>
+                <ngx-gallery [options]="galleryOptions" [images]="galleryImages" 
+                    style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
+            </tab>
+            <tab heading='Tin nhắn'>
+                <p>Tin nhắn</p>
+            </tab>
+        </tabset>
+    </div>
+</div>
