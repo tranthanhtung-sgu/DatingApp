@@ -25,6 +25,11 @@ namespace API.Data
             return await _context.Users.FindAsync(id);
         }
 
+        public async Task<AppUser> GetUserByUsernameAsync(string username)
+        {
+            return await _context.Users.Where(x => x.UserName == username).SingleOrDefaultAsync();
+        }
+
         public async Task<MemberDto> GetMemberAsync(string username)
         {
             return await _context.Users
