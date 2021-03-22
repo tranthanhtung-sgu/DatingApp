@@ -1,16 +1,34 @@
-<form #registerForm="ngForm" (ngSubmit)="register()">
+<form [formGroup]='registerForm' (ngSubmit)="registerForm.valid && register()">
     <h2 class="text-center text-primary">Đăng ký</h2>
     <hr>
     <div class="form-group">
-        <input type="text" class="form-control" name="username"
-         [(ngModel)]="model.username" placeholder="Tên đăng nhập">
+        <label class="control-label" style="margin-right: 10px;">Tôi là :</label>
+        <label class="radio-inline">
+            <input type="radio" value="male" formControlName='gender'> Nam
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="female" formControlName='gender'> Nữ
+        </label>
     </div>
-    <div class="form-group">
-        <input type="password" class="form-control" name="password"
-         [(ngModel)]="model.password" placeholder="Mật khẩu">
-    </div>
+    <app-text-input [formControl]='registerForm.controls["username"]' [label]='"Tài khoản"'></app-text-input>
+    <app-text-input [formControl]='registerForm.controls["knownAs"]' [label]='"Tên"'></app-text-input>
+    <app-date-input [formControl]='registerForm.controls["dateOfBirth"]' [label]='"Ngày sinh"' [maxDate]='maxDate'></app-date-input>
+    <app-text-input [formControl]='registerForm.controls["city"]' [label]='"Thành phố"'></app-text-input>
+    <app-text-input [formControl]='registerForm.controls["country"]' [label]='"Quốc gia"'></app-text-input>
+    <app-text-input [formControl]='registerForm.controls["password"]' [label]='"Mật khẩu"' [type]='"password"'>
+    </app-text-input>
+    <app-text-input [formControl]='registerForm.controls["confirmPassword"]' [label]='"Xác thực mật khẩu"'
+        [type]='"password"'></app-text-input>
+        
+        <div class="row mt-5" *ngIf="validationErrors.length >0">
+            <ul class="text-danger">
+              <li *ngFor="let error of validationErrors">
+                {{error}}
+              </li>
+            </ul>
+          </div>
     <div class="form-group text-center">
-        <button class="btn btn-success mr-2">Đăng ký</button>
+        <button [disabled] = '!registerForm.valid' class="btn btn-success mr-2" type="submit">Đăng ký</button>
         <button class="btn btn-light mr-2" (click)="cancel()">Hủy bỏ</button>
     </div>
 </form>
