@@ -13,11 +13,11 @@
             </div>
             <div>
                 <strong>Online gần nhất: </strong>
-                <p>{{ member.lastActive }}</p>
+                <p>{{ member.lastActive | timeago}}</p>
             </div>
             <div>
                 <strong>Ngày tham gia:</strong>
-                <p>{{ member.created }}</p>
+                <p>{{ member.created | date}}</p>
             </div>
         </div>
         <div class="card-footer">
