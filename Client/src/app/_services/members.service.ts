@@ -45,7 +45,7 @@ export class MembersService {
   getMember(username: string) {
     const member = [...this.memberCache.values()]
       .reduce((arr, elem) => arr.concat(elem.result), [])
-      .find((member: Member) => member.userName === username);
+      .find((member: Member) => member.username === username);
       console.log(member);
       
       if (member) {
@@ -53,6 +53,17 @@ export class MembersService {
       }
     
     return this.http.get<Member>(this.baseUrl + 'users/' + username);
+  }
+  
+  addLike(username: string){
+    console.log(username)
+    return this.http.post(this.baseUrl+ "likes/"+username, {});
+  }
+
+  getUsersLike(predicate: string, pageNumber: number, pageSize: number) {
+    let params = this.getPaginationHeaders(pageNumber,pageSize);
+    params = params.append('predicate', predicate);
+    return this.getPaginationResult<Partial<Member[]>>(this.baseUrl+ 'likes/', params, this.http);
   }
 
   updateMember(member: Member) {

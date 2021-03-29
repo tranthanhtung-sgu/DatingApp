@@ -52,11 +52,11 @@
         <app-member-card [member]="member"></app-member-card>
     </div>
 </div>
-<div class="d-flex justify-content-lg-center">
+<div class="d-flex justify-content-lg-center" *ngIf="pagination != undefined">
     <pagination 
         [boundaryLinks]="false" 
-        [totalItems]="pagination?.totalItems"
-        [itemsPerPage]="pagination?.itemsPerPage"
+        [totalItems]="pagination.totalItems"
+        [itemsPerPage]="pagination.itemsPerPage"
         [(ngModel)]="pagination.currentPage"
         (pageChanged)="pageChange($event)"
         previousText="&lsaquo;" 

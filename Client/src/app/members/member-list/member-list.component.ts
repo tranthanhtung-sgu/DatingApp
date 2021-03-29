@@ -31,8 +31,9 @@ export class MemberListComponent implements OnInit {
 
   loadMembers() {
     this.menberService.getMembers(this.userParams).subscribe(response => {
-      this.members = response.result;
-      this.pagination = response.pagination;
+        this.members = response.result;
+        this.pagination = response.pagination;
+        this.pagination.currentPage = 1;
     })
   }
   pageChange(event) {
