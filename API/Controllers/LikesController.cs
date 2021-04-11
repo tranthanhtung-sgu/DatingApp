@@ -21,7 +21,7 @@ namespace API.Controllers
 
         [HttpPost("{username}")]
         public async Task<IActionResult> AddLike(string username)
-        {
+        {  
             var sourceUserId = User.GetUserId();
             var likedUser = await _userRepository.GetUserByUsernameAsync(username); //Get User duoc Like
             var sourceUser = await _likeRepository.GetUserWithLikes(sourceUserId);  // Get minh ra tu bang like

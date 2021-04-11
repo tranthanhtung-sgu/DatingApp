@@ -38,7 +38,6 @@ import { PaginationModule } from "ngx-bootstrap/pagination";
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TimeagoModule } from 'ngx-timeago';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +55,7 @@ import { TimeagoModule } from 'ngx-timeago';
     MemberEditComponent,
     PhotoEditorComponent,
     TextInputComponent,
-    DateInputComponent
+    DateInputComponent,
   ],
   imports: [
     BrowserModule,

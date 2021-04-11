@@ -39,6 +39,7 @@ namespace API
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPhotoService, PhotoService>();
             services.AddScoped<ILikesRepository, LikeRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -67,8 +68,6 @@ namespace API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
             }
 
             app.UseHttpsRedirection();
